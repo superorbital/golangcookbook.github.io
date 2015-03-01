@@ -1,2 +1,4 @@
 name: Go Cookbook
-markdown: redcarpet
+markdown: kramdown
+kramdown:
+  input: GFM

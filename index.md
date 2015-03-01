@@ -3,7 +3,14 @@ layout: default
 title: Go Cookbook
 ---
 
-### Chapter 1:  Strings
+### Running
+
+* Running a one-off file
+* [Running a file via a shebang line (`#!`)](/chapters/running/shebang)
+* Building a binary
+* Cross compiling a binary
+
+### Strings
 
 * Introduction
 * Accessing Substrings
@@ -31,7 +38,7 @@ title: Go Cookbook
 * Program: fixstyle
 * Program: psgrep
 
-### Chapter 2:  Numbers
+### Numbers
 
 * Introduction
 * Checking Whether a String Is a Valid Number
@@ -53,7 +60,7 @@ title: Go Cookbook
 * Printing Correct Plurals
 * Program: Calculating Prime Factors
 
-### Chapter 3:  Dates and Times
+### Dates and Times
 
 * Introduction
 * Finding Today's Date
@@ -68,7 +75,7 @@ title: Go Cookbook
 * Short Sleeps
 * Program: hopdelta
 
-### Chapter 4:  Arrays
+### Arrays
 
 * Introduction
 * Specifying a List in Your Program
@@ -92,7 +99,7 @@ title: Go Cookbook
 * Program: words
 * Program: permute
 
-### Chapter 5:  Hashes
+### Hashes
 
 * Introduction
 * Adding an Element to a Hash
@@ -113,7 +120,7 @@ title: Go Cookbook
 * Representing Relationships Between Data
 * Program: dutree
 
-### Chapter 6:  Pattern Matching
+### Pattern Matching
 
 * Introduction
 * Copying and Substituting Simultaneously
@@ -140,7 +147,7 @@ title: Go Cookbook
 * Program: tcgrep
 * Regular Expression Grab Bag
 
-### Chapter 7:  File Access
+### File Access
 
 * Introduction
 * Opening a File
@@ -169,7 +176,7 @@ title: Go Cookbook
 * Program: netlock
 * Program: lockarea
 
-### Chapter 8:  File Contents
+### File Contents
 
 * Introduction
 * Reading Lines with Continuation Characters
@@ -200,7 +207,7 @@ title: Go Cookbook
 * Program: laston
 * Program: Flat File Indexes
 
-### Chapter 9:  Directories
+### Directories
 
 * Introduction
 * Getting and Setting Timestamps
@@ -217,7 +224,7 @@ title: Go Cookbook
 * Program: symirror
 * Program: lst
 
-### Chapter 10:  Subroutines
+### Subroutines
 
 * Introduction
 * Accessing Subroutine Arguments
@@ -239,7 +246,7 @@ title: Go Cookbook
 * Writing a Switch Statement
 * Program: Sorting Your Mail
 
-### Chapter 11:  References and Records
+### References and Records
 
 * Introduction
 * Taking References to Arrays
@@ -260,7 +267,7 @@ title: Go Cookbook
 * Program: Outlines
 * Program: Binary Trees
 
-### Chapter 12:  Packages, Libraries, and Modules
+### Packages, Libraries, and Modules
 
 * Introduction
 * Defining a Module's Interface
@@ -287,7 +294,7 @@ title: Go Cookbook
 * Example: Module Template
 * Program: Finding Versions and Descriptions of Installed Modules
 
-### Chapter 14:  Database Access
+### Database Access
 
 * Introduction
 * Making and Using a DBM File
@@ -310,7 +317,7 @@ title: Go Cookbook
 * Using SQL Without a Database Server
 * Program: ggh—Grep Netscape Global History
 
-### Chapter 15:  Interactivity
+### Interactivity
 
 * Introduction
 * Parsing Program Arguments
@@ -337,7 +344,7 @@ title: Go Cookbook
 * Program: tkshufflepod
 * Program: graphbox
 
-### Chapter 16:  Process Management and Communication
+### Process Management and Communication
 
 * Introduction
 * Gathering Output from a Program
@@ -364,7 +371,7 @@ title: Go Cookbook
 * Turning Signals into Fatal Errors
 * Program: sigrand
 
-### Chapter 17:  Sockets
+### Sockets
 
 * Introduction
 * Writing a TCP Client
@@ -389,7 +396,7 @@ title: Go Cookbook
 * Program: backsniff
 * Program: fwdport
 
-### Chapter 18:  Internet Services
+### Internet Services
 
 * Introduction
 * Simple DNS Lookups
@@ -409,7 +416,7 @@ title: Go Cookbook
 * Program: rfrm
 * Program: expn and vrfy
 
-### Chapter 20:  Web Automation
+### Web Automation
 
 * Introduction
 * Fetching a URL from a Perl Script
