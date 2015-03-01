@@ -2,3 +2,5 @@ name: The Go Cookbook
 markdown: kramdown
 kramdown:
   input: GFM
+sass:
+  style: :compressed

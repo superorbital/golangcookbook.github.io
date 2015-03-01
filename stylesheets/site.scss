@@ -1,0 +1,32 @@
+---
+---
+
+h2.recipe {
+  &:before { 
+    content: "Recipe: ";
+    font-weight: bold;
+  }
+}
+
+p.question {
+  padding: 1em;
+  padding-left: 75px;
+  background: #FFF5B0 url(../images/question.png) 10px 10px no-repeat;
+  background-size: 50px 50px;
+  border: 1px dashed #2360C2;
+  min-height: 50px;
+}
+
+p.warning {
+  &:before { 
+    content: "Warning: ";
+    font-weight: bold;
+  }
+  padding: 1em;
+  padding-left: 75px;
+  background: #FFF5B0 url(../images/warning.png) 10px 10px no-repeat;
+  background-size: 50px 50px;
+  border: 1px solid #FF8000;
+  min-height: 50px;
+}
+

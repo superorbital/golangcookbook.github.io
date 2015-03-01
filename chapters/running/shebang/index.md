@@ -1,8 +1,10 @@
 ---
+title: Running a file via a shebang line
 layout: default
 ---
 
-## Running a file via a shebang line
+## {{ page.title }}
+{:.recipe}
 
 How can I add a shebang line to the top of my Go file in order to run it directly, as though it were an interpreted script?
 {:.question}
@@ -78,6 +80,9 @@ func main() {
 This file is now executable on the command line (after setting the execution bit via `chmod +x`, of course).  However, it's also technically invalid Go. This means you can't compile the same code via `go build` that you would run with gorun.
 
 As we said earlier, this solution also requires that your users install gorun, making it less portable than ideal.
+
+As of March 1st, 2015, [gorun does not compile on OS X](https://bugs.launchpad.net/gorun/+bug/1176275), but it looks like this will be resolved, soon.
+{:.warning}
 
 ### Mimic the shebang via Bash
 
