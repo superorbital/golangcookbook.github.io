@@ -9,6 +9,7 @@ title: Go Cookbook
 * [Running a file via a shebang line (`#!`)](/chapters/running/shebang)
 * Building a binary
 * Cross compiling a binary
+    http://dave.cheney.net/2015/03/03/cross-compilation-just-got-a-whole-lot-better-in-go-1-5
 
 ### Strings
 
