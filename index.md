@@ -3,40 +3,29 @@ layout: default
 title: Go Cookbook
 ---
 
-### Running
+### Running & Packaging
 
 * Running a one-off file
 * [Running a file via a shebang line (`#!`)](/chapters/running/shebang)
 * Building a binary
 * [Cross compiling](/chapters/running/cross-compiling)
+* Managing dependencies
 
 ### Strings
 
 * Introduction
-* Accessing Substrings
-* Establishing a Default Value
-* Exchanging Values Without Using Temporary Variables
-* Converting Between Characters and Values
-* Using Named Unicode Characters
+* [Accessing Substrings](/chapters/strings/substrings)
 * Processing a String One Character at a Time
 * Reversing a String by Word or Character
-* Treating Unicode Combined Characters as Single Characters
-* Canonicalizing Strings with Unicode Combined Characters
-* Treating a Unicode String as Octets
 * Expanding and Compressing Tabs
 * Expanding Variables in User Input
 * Controlling Case
-* Properly Capitalizing a Title or Headline
+* [Properly Capitalizing a Title](/chapters/strings/title)
 * Interpolating Functions and Expressions Within Strings
 * Indenting Here Documents
-* Reformatting Paragraphs
 * Escaping Characters
 * Trimming Blanks from the Ends of a String
 * Parsing Comma-Separated Data
-* Constant Variables
-* Soundex Matching
-* Program: fixstyle
-* Program: psgrep
 
 ### Numbers
 
@@ -88,7 +77,7 @@ title: Go Cookbook
 * Finding Elements in One Array but Not Another
 * Computing Union, Intersection, or Difference of Unique Lists
 * Appending One Array to Another
-* Reversing an Array
+* [Reversing an Array](/chapters/arrays/reverse)
 * Processing Multiple Elements of an Array
 * Finding the First List Element That Passes a Test
 * Finding All Elements in an Array Matching Certain Criteria
