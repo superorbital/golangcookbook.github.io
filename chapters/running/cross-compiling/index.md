@@ -1,6 +1,7 @@
 ---
 title: Cross Compiling
 layout: default
+status: unfinished
 ---
 
 ## {{ page.title }}
@@ -13,9 +14,11 @@ Since Go is a statically compiled language, it's well designed for producing tin
 
 ### Pre 1.5
 
-Before 1.5, cross compilation was an arduous process, requiring [massive scripts](http://dave.cheney.net/2013/07/09/an-introduction-to-cross-compilation-with-go-1-1) to build separate go compilers for each supported platform. 
+Before 1.5, cross compilation was an arduous process, requiring [massive scripts](http://dave.cheney.net/2013/07/09/an-introduction-to-cross-compilation-with-go-1-1) to build separate go compilers for each supported platform.
 
 ### Post 1.5
+
+Things have been much better since v1.5 of Go was released.  Go now supports 
 
 http://dave.cheney.net/2015/03/03/cross-compilation-just-got-a-whole-lot-better-in-go-1-5
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Properly Capitalizing a Title
+status: finished
 ---
 
 ## {{ page.title }}
