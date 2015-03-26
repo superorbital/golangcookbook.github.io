@@ -1,8 +1,8 @@
 package main
 
 import (
+	"fmt"
 	"strings"
-	"unicode"
 )
 
 func properTitle(input string) string {
@@ -13,14 +13,12 @@ func properTitle(input string) string {
 		if strings.Contains(smallwords, " "+word+" ") {
 			words[index] = word
 		} else {
-			words[index][0] = uint8(unicode.ToTitle(rune(words[index][0])))
+			words[index] = strings.Title(word)
 		}
 	}
 	return strings.Join(words, " ")
 }
 
 func main() {
-	s := "welcome to the dollhouse!"
-	println(s, " => ", strings.Title(s))
-	println(s, " => ", properTitle(s))
+	fmt.Println(properTitle("welcome to the dollhouse!"))
 }
