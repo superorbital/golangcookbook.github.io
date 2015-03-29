@@ -19,12 +19,28 @@ title: Go Cookbook
 * Reversing a String by Word or Character
 * Expanding and Compressing Tabs
 * Expanding Variables in User Input
-* Controlling Case
-* [Properly Capitalizing a Title](/chapters/strings/title)
 * Interpolating Functions and Expressions Within Strings
 * Indenting Here Documents
 * Escaping Characters
 * Trimming Blanks from the Ends of a String
+
+  ```
+  It("can remove unwanted bits", func() {
+    hello := " Hello "
+    Expect(strings.Trim(hello, " ")).To(Equal("Hello"))
+    Expect(strings.TrimSpace(hello)).To(Equal("Hello"))
+  
+    Expect(strings.TrimLeft(hello, " ")).To(Equal("Hello "))
+    Expect(strings.TrimRight(hello, " ")).To(Equal(" Hello"))
+  
+    Expect(strings.TrimPrefix("FOO: bar", "FOO: ")).To(Equal("bar"))
+    Expect(strings.TrimPrefix("bar", "FOO: ")).To(Equal("bar"))
+  })
+  ```
+
+* Controlling Case
+* [Properly Capitalizing a Title](/chapters/strings/title)
+* [Turning an Array into a Sentence](/chapters/strings/sentence)
 * Parsing Comma-Separated Data
 
 ### Numbers

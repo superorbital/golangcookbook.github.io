@@ -1,130 +1,0 @@
-!<arch>
-__.PKGDEF       0           0     0     644     11525     `
-go object darwin amd64 go1.4.1 X:precisestack
-
-$$
-package colorable
-	import runtime "runtime"
-	import io "io"
-	import os "os"
-	type @"io".Writer interface { Write(@"io".p []byte) (@"io".n int, @"io".err error) }
-	func @"".NewColorableStdout () (? @"io".Writer) { return @"os".Stdout }
-	func @"".NewColorableStderr () (? @"io".Writer) { return @"os".Stderr }
-	func @"".init ()
-	type @"os".dirInfo struct { @"os".buf []byte; @"os".nbuf int; @"os".bufp int }
-	type @"os".file struct { @"os".fd int; @"os".name string; @"os".dirinfo *@"os".dirInfo; @"os".nepipe int32 }
-	func (@"os".file·2 *@"os".file) @"os".close () (? error)
-	type @"os".FileMode uint32
-	func (@"os".m·2 @"os".FileMode) IsDir () (? bool) { return @"os".m·2 & @"os".FileMode(0x80000000) != @"os".FileMode(0x0) }
-	func (@"os".m·2 @"os".FileMode) IsRegular () (? bool) { return @"os".m·2 & @"os".FileMode(0x8F000000) == @"os".FileMode(0x0) }
-	func (@"os".m·2 @"os".FileMode) Perm () (? @"os".FileMode) { return @"os".m·2 & @"os".FileMode(0x1FF) }
-	func (@"os".m·2 @"os".FileMode) String () (? string)
-	import time "time" // indirect
-	type @"time".zone struct { @"time".name string; @"time".offset int; @"time".isDST bool }
-	type @"time".zoneTrans struct { @"time".when int64; @"time".index uint8; @"time".isstd bool; @"time".isutc bool }
-	type @"time".Location struct { @"time".name string; @"time".zone []@"time".zone; @"time".tx []@"time".zoneTrans; @"time".cacheStart int64; @"time".cacheEnd int64; @"time".cacheZone *@"time".zone }
-	func (@"time".l·2 *@"time".Location "esc:0x0") String () (? string)
-	func (@"time".l·2 *@"time".Location "esc:0x0") @"time".firstZoneUsed () (? bool)
-	func (@"time".l·2 *@"time".Location "esc:0x2") @"time".get () (? *@"time".Location)
-	func (@"time".l·6 *@"time".Location "esc:0x1") @"time".lookup (@"time".sec·7 int64) (@"time".name·1 string, @"time".offset·2 int, @"time".isDST·3 bool, @"time".start·4 int64, @"time".end·5 int64)
-	func (@"time".l·2 *@"time".Location "esc:0x0") @"time".lookupFirstZone () (? int)
-	func (@"time".l·4 *@"time".Location "esc:0x0") @"time".lookupName (@"time".name·5 string "esc:0x0", @"time".unix·6 int64) (@"time".offset·1 int, @"time".isDST·2 bool, @"time".ok·3 bool)
-	type @"time".Duration int64
-	func (@"time".d·2 @"time".Duration) Hours () (? float64) { var @"time".hour·3 @"time".Duration; ; @"time".hour·3 = @"time".d·2 / @"time".Duration(0x34630B8A000); var @"time".nsec·4 @"time".Duration; ; @"time".nsec·4 = @"time".d·2 % @"time".Duration(0x34630B8A000); return float64(@"time".hour·3) + float64(@"time".nsec·4) * 0x9C5FFF26ED75Fp-93 }
-	func (@"time".d·2 @"time".Duration) Minutes () (? float64) { var @"time".min·3 @"time".Duration; ; @"time".min·3 = @"time".d·2 / @"time".Duration(0xDF8475800); var @"time".nsec·4 @"time".Duration; ; @"time".nsec·4 = @"time".d·2 % @"time".Duration(0xDF8475800); return float64(@"time".min·3) + float64(@"time".nsec·4) * 0x9299FF347E9E9p-87 }
-	func (@"time".d·2 @"time".Duration) Nanoseconds () (? int64) { return int64(@"time".d·2) }
-	func (@"time".d·2 @"time".Duration) Seconds () (? float64) { var @"time".sec·3 @"time".Duration; ; @"time".sec·3 = @"time".d·2 / @"time".Duration(0x3B9ACA00); var @"time".nsec·4 @"time".Duration; ; @"time".nsec·4 = @"time".d·2 % @"time".Duration(0x3B9ACA00); return float64(@"time".sec·3) + float64(@"time".nsec·4) * 0x112E0BE826D695p-82 }
-	func (@"time".d·2 @"time".Duration) String () (? string)
-	type @"time".Month int
-	func (@"time".m·2 @"time".Month) String () (? string) { return @"time".months[@"time".m·2 - @"time".Month(0x1)] }
-	type @"time".Weekday int
-	func (@"time".d·2 @"time".Weekday) String () (? string) { return @"time".days[@"time".d·2] }
-	type @"time".Time struct { @"time".sec int64; @"time".nsec int32; @"time".loc *@"time".Location }
-	func (@"time".t·2 @"time".Time "esc:0x2") Add (@"time".d·3 @"time".Duration) (? @"time".Time)
-	func (@"time".t·2 @"time".Time "esc:0x2") AddDate (@"time".years·3 int, @"time".months·4 int, @"time".days·5 int) (? @"time".Time)
-	func (@"time".t·2 @"time".Time "esc:0x0") After (@"time".u·3 @"time".Time "esc:0x0") (? bool) { return @"time".t·2.@"time".sec > @"time".u·3.@"time".sec || @"time".t·2.@"time".sec == @"time".u·3.@"time".sec && @"time".t·2.@"time".nsec > @"time".u·3.@"time".nsec }
-	func (@"time".t·2 @"time".Time "esc:0x0") Before (@"time".u·3 @"time".Time "esc:0x0") (? bool) { return @"time".t·2.@"time".sec < @"time".u·3.@"time".sec || @"time".t·2.@"time".sec == @"time".u·3.@"time".sec && @"time".t·2.@"time".nsec < @"time".u·3.@"time".nsec }
-	func (@"time".t·4 @"time".Time "esc:0x0") Clock () (@"time".hour·1 int, @"time".min·2 int, @"time".sec·3 int)
-	func (@"time".t·4 @"time".Time "esc:0x0") Date () (@"time".year·1 int, @"time".month·2 @"time".Month, @"time".day·3 int)
-	func (@"time".t·2 @"time".Time "esc:0x0") Day () (? int)
-	func (@"time".t·2 @"time".Time "esc:0x0") Equal (@"time".u·3 @"time".Time "esc:0x0") (? bool) { return @"time".t·2.@"time".sec == @"time".u·3.@"time".sec && @"time".t·2.@"time".nsec == @"time".u·3.@"time".nsec }
-	func (@"time".t·2 @"time".Time "esc:0x0") Format (@"time".layout·3 string "esc:0x0") (? string)
-	func (@"time".t·2 *@"time".Time "esc:0x0") GobDecode (@"time".data·3 []byte "esc:0x0") (? error)
-	func (@"time".t·3 @"time".Time "esc:0x0") GobEncode () (? []byte, ? error)
-	func (@"time".t·2 @"time".Time "esc:0x0") Hour () (? int)
-	func (@"time".t·3 @"time".Time "esc:0x0") ISOWeek () (@"time".year·1 int, @"time".week·2 int)
-	func (@"time".t·2 @"time".Time "esc:0x2") In (@"time".loc·3 *@"time".Location "esc:0x2") (? @"time".Time)
-	func (@"time".t·2 @"time".Time "esc:0x0") IsZero () (? bool) { return @"time".t·2.@"time".sec == 0x0 && @"time".t·2.@"time".nsec == 0x0 }
-	func (@"time".t·2 @"time".Time "esc:0x2") Local () (? @"time".Time) { @"time".t·2.@"time".loc = @"time".Local; return @"time".t·2 }
-	func (@"time".t·2 @"time".Time "esc:0x2") Location () (? *@"time".Location) { var @"time".l·3 *@"time".Location; ; @"time".l·3 = @"time".t·2.@"time".loc; if @"time".l·3 == nil { @"time".l·3 = @"time".UTC }; return @"time".l·3 }
-	func (@"time".t·3 @"time".Time "esc:0x0") MarshalBinary () (? []byte, ? error)
-	func (@"time".t·3 @"time".Time "esc:0x0") MarshalJSON () (? []byte, ? error)
-	func (@"time".t·3 @"time".Time "esc:0x0") MarshalText () (? []byte, ? error)
-	func (@"time".t·2 @"time".Time "esc:0x0") Minute () (? int)
-	func (@"time".t·2 @"time".Time "esc:0x0") Month () (? @"time".Month)
-	func (@"time".t·2 @"time".Time "esc:0x0") Nanosecond () (? int) { return int(@"time".t·2.@"time".nsec) }
-	func (@"time".t·2 @"time".Time "esc:0x2") Round (@"time".d·3 @"time".Duration) (? @"time".Time)
-	func (@"time".t·2 @"time".Time "esc:0x0") Second () (? int)
-	func (@"time".t·2 @"time".Time "esc:0x0") String () (? string)
-	func (@"time".t·2 @"time".Time "esc:0x0") Sub (@"time".u·3 @"time".Time "esc:0x0") (? @"time".Duration)
-	func (@"time".t·2 @"time".Time "esc:0x2") Truncate (@"time".d·3 @"time".Duration) (? @"time".Time)
-	func (@"time".t·2 @"time".Time "esc:0x2") UTC () (? @"time".Time) { @"time".t·2.@"time".loc = @"time".UTC; return @"time".t·2 }
-	func (@"time".t·2 @"time".Time "esc:0x0") Unix () (? int64) { return @"time".t·2.@"time".sec + -0xE7791F700 }
-	func (@"time".t·2 @"time".Time "esc:0x0") UnixNano () (? int64) { return (@"time".t·2.@"time".sec + -0xE7791F700) * 0x3B9ACA00 + int64(@"time".t·2.@"time".nsec) }
-	func (@"time".t·2 *@"time".Time "esc:0x0") UnmarshalBinary (@"time".data·3 []byte "esc:0x0") (? error)
-	func (@"time".t·2 *@"time".Time "esc:0x0") UnmarshalJSON (@"time".data·3 []byte "esc:0x0") (@"time".err·1 error)
-	func (@"time".t·2 *@"time".Time "esc:0x0") UnmarshalText (@"time".data·3 []byte "esc:0x0") (@"time".err·1 error)
-	func (@"time".t·2 @"time".Time "esc:0x0") Weekday () (? @"time".Weekday)
-	func (@"time".t·2 @"time".Time "esc:0x0") Year () (? int)
-	func (@"time".t·2 @"time".Time "esc:0x0") YearDay () (? int)
-	func (@"time".t·3 @"time".Time "esc:0x0") Zone () (@"time".name·1 string, @"time".offset·2 int)
-	func (@"time".t·2 @"time".Time "esc:0x0") @"time".abs () (? uint64)
-	func (@"time".t·5 @"time".Time "esc:0x0") @"time".date (@"time".full·6 bool) (@"time".year·1 int, @"time".month·2 @"time".Month, @"time".day·3 int, @"time".yday·4 int)
-	func (@"time".t·4 @"time".Time "esc:0x1") @"time".locabs () (@"time".name·1 string, @"time".offset·2 int, @"time".abs·3 uint64)
-	type @"os".FileInfo interface { IsDir() (? bool); ModTime() (? @"time".Time); Mode() (? @"os".FileMode); Name() (? string); Size() (? int64); Sys() (? interface {}) }
-	type @"os".File struct { @"os".? *@"os".file }
-	func (@"os".f·2 *@"os".File) Chdir () (? error)
-	func (@"os".f·2 *@"os".File) Chmod (@"os".mode·3 @"os".FileMode) (? error)
-	func (@"os".f·2 *@"os".File) Chown (@"os".uid·3 int, @"os".gid·4 int) (? error)
-	func (@"os".f·2 *@"os".File) Close () (? error)
-	func (@"os".f·2 *@"os".File "esc:0x0") Fd () (? uintptr) { if @"os".f·2 == nil { return 0xFFFFFFFFFFFFFFFF }; return uintptr(@"os".f·2.@"os".file.@"os".fd) }
-	func (@"os".f·2 *@"os".File "esc:0x1") Name () (? string) { return @"os".f·2.@"os".file.@"os".name }
-	func (@"os".f·3 *@"os".File) Read (@"os".b·4 []byte "esc:0x0") (@"os".n·1 int, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File) ReadAt (@"os".b·4 []byte "esc:0x0", @"os".off·5 int64) (@"os".n·1 int, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File "esc:0x0") Readdir (@"os".n·4 int) (@"os".fi·1 []@"os".FileInfo, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File "esc:0x0") Readdirnames (@"os".n·4 int) (@"os".names·1 []string, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File) Seek (@"os".offset·4 int64, @"os".whence·5 int) (@"os".ret·1 int64, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File) Stat () (@"os".fi·1 @"os".FileInfo, @"os".err·2 error)
-	func (@"os".f·2 *@"os".File "esc:0x0") Sync () (@"os".err·1 error)
-	func (@"os".f·2 *@"os".File) Truncate (@"os".size·3 int64) (? error)
-	func (@"os".f·3 *@"os".File) Write (@"os".b·4 []byte "esc:0x0") (@"os".n·1 int, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File) WriteAt (@"os".b·4 []byte "esc:0x0", @"os".off·5 int64) (@"os".n·1 int, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File) WriteString (@"os".s·4 string "esc:0x0") (@"os".ret·1 int, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File "esc:0x0") @"os".pread (@"os".b·4 []byte "esc:0x0", @"os".off·5 int64) (@"os".n·1 int, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File "esc:0x0") @"os".pwrite (@"os".b·4 []byte "esc:0x0", @"os".off·5 int64) (@"os".n·1 int, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File "esc:0x0") @"os".read (@"os".b·4 []byte "esc:0x0") (@"os".n·1 int, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File "esc:0x0") @"os".readdir (@"os".n·4 int) (@"os".fi·1 []@"os".FileInfo, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File "esc:0x0") @"os".readdirnames (@"os".n·4 int) (@"os".names·1 []string, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File "esc:0x0") @"os".seek (@"os".offset·4 int64, @"os".whence·5 int) (@"os".ret·1 int64, @"os".err·2 error)
-	func (@"os".f·3 *@"os".File "esc:0x0") @"os".write (@"os".b·4 []byte "esc:0x0") (@"os".n·1 int, @"os".err·2 error)
-	var @"os".Stdout *@"os".File
-	var @"os".Stderr *@"os".File
-	var @"time".months [12]string
-	var @"time".days [7]string
-	var @"time".Local *@"time".Location
-	var @"time".UTC *@"time".Location
-
-$$
- _go_.6          0           0     0     644     3211      `
-go object darwin amd64 go1.4.1 X:precisestack
-
-!
-  go13ldio.aos.a �*"".NewColorableStdout  �  �eH�%    H;aw�    ��H�� H�D$(    H�D$0    H�    1�H9�tH�    H�\$0H�D$(H�� �H�    H�$H�    H�\$H�    H�\$�    H�D$�
-         0runtime.morestack_noctxt   ^  4go.itab.*os.File.io.Writer   z  os.Stdout   �  type.*os.File   �  type.io.Writer   �  4go.itab.*os.File.io.Writer   �   runtime.typ2Itab    @  "".~r0  type.io.Writer @5?@0 � 
-,T 
- s Tgclocals·d64e51a4c4bfeaa840e480961ec6b0b3 Tgclocals·3280bececceccd33cb74587feedb1f9f   �/Users/tsaleh/code/golangcookbook/golangcookbook.github.io/src/github.com/mattn/go-colorable/colorable_others.go�*"".NewColorableStderr  �  �eH�%    H;aw�    ��H�� H�D$(    H�D$0    H�    1�H9�tH�    H�\$0H�D$(H�� �H�    H�$H�    H�\$H�    H�\$�    H�D$�
-         0runtime.morestack_noctxt   ^  4go.itab.*os.File.io.Writer   z  os.Stderr   �  type.*os.File   �  type.io.Writer   �  4go.itab.*os.File.io.Writer   �   runtime.typ2Itab    @  "".~r0  type.io.Writer @5?@0 � 
-,T 
- s Tgclocals·d64e51a4c4bfeaa840e480961ec6b0b3 Tgclocals·3280bececceccd33cb74587feedb1f9f   �/Users/tsaleh/code/golangcookbook/golangcookbook.github.io/src/github.com/mattn/go-colorable/colorable_others.go�"".init  �  �eH�%    H;aw�    ���    �� t�    ��u��    �    �    �    �    �
-         0runtime.morestack_noctxt   2  "".initdone·   J  "".initdone·   `  "runtime.throwinit   p "".initdone·   |  os.init   �  io.init   � "".initdone·        P P "P 
- /! Tgclocals·3280bececceccd33cb74587feedb1f9f Tgclocals·3280bececceccd33cb74587feedb1f9f   �/Users/tsaleh/code/golangcookbook/golangcookbook.github.io/src/github.com/mattn/go-colorable/colorable_others.go�,4go.itab.*os.File.io.Writer     �Tgclocals·3280bececceccd33cb74587feedb1f9f           �Tgclocals·d64e51a4c4bfeaa840e480961ec6b0b3              �Tgclocals·3280bececceccd33cb74587feedb1f9f           �Tgclocals·d64e51a4c4bfeaa840e480961ec6b0b3              �Tgclocals·3280bececceccd33cb74587feedb1f9f           �Tgclocals·3280bececceccd33cb74587feedb1f9f           �,"".initdone·  type.uint8   �0"".NewColorableStdout·f              *"".NewColorableStdout   �&runtime.typ2Itab·f               runtime.typ2Itab   �,runtime.throwreturn·f              &runtime.throwreturn   �0"".NewColorableStderr·f              *"".NewColorableStderr   �"".init·f              "".init   �(runtime.throwinit·f              "runtime.throwinit   �os.init·f              os.init   �io.init·f              io.init   �&go.string."runtime" 0  0               runtime    &go.string."runtime"   �,go.importpath.runtime.                       &go.string."runtime"   �go.string."io" 0  &               io    go.string."io"   �"go.importpath.io.                       go.string."io"   �go.string."os" 0  &               os    go.string."os"   �"go.importpath.os.                       go.string."os"   �"runtime.zerovalue      ��go13ld 
