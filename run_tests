@@ -2,5 +2,11 @@
 
 for file in $(find chapters -name "test.go"); do
   echo "$file"
-  diff <( go run $file) ${file/.go/.expected}
+	expected=${file/.go/.expected}
+	if [ -f $expected ]; then
+  	diff <( go run $file) $expected
+	else
+		echo "$expected not found - generating it..."
+		go run $file > $expected
+	fi
 done
