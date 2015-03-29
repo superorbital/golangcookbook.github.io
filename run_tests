@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 for file in $(find chapters -name "test.go"); do
-  echo "====== $file"
+  echo "$file"
   diff <( go run $file) ${file/.go/.expected}
 done

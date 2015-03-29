@@ -94,7 +94,6 @@ func properTitle(input string) string {
 func main() {
 	fmt.Println(properTitle("welcome to the dollhouse!"))
 }
-
 ```
 
 In the implementation above, we first split the string into an array of words, loop through them, and only capitalize those who don't match our hard-coded list of small words.  Finally, we join the words up into a single string, and return the result.  
