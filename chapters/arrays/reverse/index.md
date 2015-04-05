@@ -1,7 +1,6 @@
 ---
 title: Reversing an Array
 layout: default
-status: finished
 ---
 
 ## {{ page.title }}

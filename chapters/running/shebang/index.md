@@ -1,7 +1,6 @@
 ---
 title: Running a file via a shebang line
 layout: default
-status: finished
 ---
 
 ## {{ page.title }}

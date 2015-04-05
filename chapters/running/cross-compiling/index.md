@@ -1,7 +1,6 @@
 ---
 title: Cross Compiling
 layout: default
-status: finished
 ---
 
 ## {{ page.title }}

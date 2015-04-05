@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Accessing Substrings
-status: unfinished
 ---
 
 ## {{ page.title }}
