@@ -15,6 +15,6 @@ func ToSentence(words []string, andOrOr string) string {
 
 func main() {
 	a := []string{"this", "that", "the other"}
-	fmt.Println(strings.Join(a, ", "))
 	fmt.Println(ToSentence(a, "or"))
+	fmt.Println(ToSentence(a, "and"))
 }
