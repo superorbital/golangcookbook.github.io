@@ -1,0 +1,242 @@
+- title: Running & Packaging
+  recipes:
+  - title: Running a One-Off File
+  - title: Cross Compiling
+    path: /chapters/running/cross-compiling
+  - title: Building a binary
+  - title: Running a file via a shebang line
+    path: /chapters/running/shebang
+  - title: Managing dependencies
+- title: Strings
+  recipes:
+  - title: Accessing Substrings
+    path: /chapters/strings/substrings
+    wip: true
+  - title: Processing a String One Character at a Time
+  - title: Reversing a String by Word or Character
+  - title: Expanding and Compressing Tabs
+  - title: Expanding Variables in User Input
+  - title: Interpolating Functions and Expressions Within Strings
+  - title: Indenting Here Documents
+  - title: Escaping Characters
+  - title: Trimming Blanks from the Ends of a String
+  - title: Controlling Case
+  - title: Properly Capitalizing a Title
+    path: /chapters/strings/title
+  - title: Turning an Array into a Sentence
+    path: /chapters/strings/sentence
+  - title: Parsing Comma-Separated Data
+- title: Numbers
+  recipes:
+  - title: Checking Whether a String Is a Valid Number
+  - title: Rounding Floating-Point Numbers
+  - title: Comparing Floating-Point Numbers
+  - title: Operating on a Series of Integers
+  - title: Working with Roman Numerals
+  - title: Generating Random Numbers
+  - title: Generating Repeatable Random Number Sequences
+  - title: Making Numbers Even More Random
+  - title: Generating Biased Random Numbers
+  - title: Doing Trigonometry in Degrees, Not Radians
+  - title: Calculating More Trigonometric Functions
+  - title: Taking Logarithms
+  - title: Multiplying Matrices
+  - title: Using Complex Numbers
+  - title: Converting Binary, Octal, and Hexadecimal Numbers
+  - title: Putting Commas in Numbers
+  - title: Printing Correct Plurals
+- title: Dates and Times
+  recipes:
+  - title: Finding Today's Date
+  - title: Converting DMYHMS to Epoch Seconds
+  - title: Converting Epoch Seconds to DMYHMS
+  - title: Adding to or Subtracting from a Date
+  - title: Difference of Two Dates
+  - title: Day in a Week/Month/Year or Week Number
+  - title: Parsing Dates and Times from Strings
+  - title: Printing a Date
+  - title: High-Resolution Timers
+  - title: Short Sleeps
+- title: Arrays
+  recipes:
+  - title: Specifying a List in Your Program
+  - title: Printing a List with Commas
+  - title: Changing Array Size
+  - title: Implementing a Sparse Array
+  - title: Iterating Over an Array
+  - title: Iterating Over an Array by Reference
+  - title: Extracting Unique Elements from a List
+  - title: Finding Elements in One Array but Not Another
+  - title: Computing Union, Intersection, or Difference of Unique Lists
+  - title: Appending One Array to Another
+  - title: Reversing an Array
+    path: /chapters/arrays/reverse
+  - title: Processing Multiple Elements of an Array
+  - title: Finding the First List Element That Passes a Test
+  - title: Finding All Elements in an Array Matching Certain Criteria
+  - title: Sorting an Array Numerically
+  - title: Sorting a List by Computable Field
+  - title: Implementing a Circular List
+  - title: Randomizing an Array
+- title: Maps
+  recipes:
+  - title: Adding an Element to a Hash
+  - title: Testing for the Presence of a Key in a Hash
+  - title: Creating a Hash with Immutable Keys or Values
+  - title: Deleting from a Hash
+  - title: Traversing a Hash
+  - title: Printing a Hash
+  - title: Retrieving from a Hash in Insertion Order
+  - title: Hashes with Multiple Values per Key
+  - title: Inverting a Hash
+  - title: Sorting a Hash
+  - title: Merging Hashes
+  - title: Finding Common or Different Keys in Two Hashes
+  - title: Hashing References
+  - title: Presizing a Hash
+  - title: Finding the Most Common Anything
+  - title: Representing Relationships Between Data
+- title: Pattern Matching
+  recipes:
+  - title: Copying and Substituting Simultaneously
+  - title: Matching Letters
+  - title: Matching Words
+  - title: Commenting Regular Expressions
+  - title: Finding the Nth Occurrence of a Match
+  - title: Matching Within Multiple Lines
+  - title: Reading Records with a Separator
+  - title: Extracting a Range of Lines
+  - title: Matching Shell Globs as Regular Expressions
+  - title: Speeding Up Interpolated Matches
+  - title: Testing for a Valid Pattern
+  - title: Honoring Locale Settings in Regular Expressions
+  - title: Approximate Matching
+  - title: Matching from Where the Last Pattern Left Off
+  - title: Greedy and Non-Greedy Matches
+  - title: Detecting Doubled Words
+  - title: Matching Nested Patterns
+  - title: Expressing AND, OR, and NOT in a Single Pattern
+  - title: Matching a Valid Mail Address
+  - title: Matching Abbreviations
+- title: File Access
+  recipes:
+  - title: Opening a File
+  - title: Opening Files with Unusual Filenames
+  - title: Expanding Tildes in Filenames
+  - title: Making Perl Report Filenames in Error Messages
+  - title: Storing Filehandles into Variables
+  - title: Writing a Subroutine That Takes Filehandles as Built-ins Do
+  - title: Caching Open Output Filehandles
+  - title: Printing to Many Filehandles Simultaneously
+  - title: Opening and Closing File Descriptors by Number
+  - title: Copying Filehandles
+  - title: Creating Temporary Files
+  - title: Storing a File Inside Your Program Text
+  - title: Storing Multiple Files in the DATA Area
+  - title: Writing a Unix-Style Filter Program
+  - title: Modifying a File in Place with a Temporary File
+  - title: Modifying a File in Place with the -i Switch
+  - title: Modifying a File in Place Without a Temporary File
+  - title: Locking a File
+  - title: Flushing Output
+  - title: Doing Non-Blocking I/O
+  - title: Determining the Number of Unread Bytes
+  - title: Reading from Many Filehandles Without Blocking
+  - title: Reading an Entire Line Without Blocking
+- title: File Contents
+  recipes:
+  - title: Reading Lines with Continuation Characters
+  - title: Counting Lines (or Paragraphs or Records) in a File
+  - title: Processing Every Word in a File
+  - title: Reading a File Backward by Line or Paragraph
+  - title: Trailing a Growing File
+  - title: Picking a Random Line from a File
+  - title: Randomizing All Lines
+  - title: Reading a Particular Line in a File
+  - title: Processing Variable-Length Text Fields
+  - title: Removing the Last Line of a File
+  - title: Processing Binary Files
+  - title: Using Random-Access I/O
+  - title: Updating a Random-Access File
+  - title: Reading a String from a Binary File
+  - title: Reading Fixed-Length Records
+  - title: Reading Configuration Files
+  - title: Testing a File for Trustworthiness
+  - title: Treating a File as an Array
+  - title: Setting the Default I/O Layers
+  - title: Reading or Writing Unicode from a Filehandle
+  - title: Converting Microsoft Text Files into Unicode
+  - title: Comparing the Contents of Two Files
+  - title: Pretending a String Is a File
+- title: Directories
+  recipes:
+  - title: Getting and Setting Timestamps
+  - title: Deleting a File
+  - title: Copying or Moving a File
+  - title: Recognizing Two Names for the Same File
+  - title: Processing All Files in a Directory
+  - title: Globbing, or Getting a List of Filenames Matching a Pattern
+  - title: Processing All Files in a Directory Recursively
+  - title: Removing a Directory and Its Contents
+  - title: Renaming Files
+  - title: Splitting a Filename into Its Component Parts
+  - title: Working with Symbolic File Permissions Instead of Octal Values
+- title: Goroutines
+- title: Sockets
+  recipes:
+  - title: Writing a TCP Client
+  - title: Writing a TCP Server
+  - title: Communicating over TCP
+  - title: Setting Up a UDP Client
+  - title: Setting Up a UDP Server
+  - title: Using Unix Domain Sockets
+  - title: Identifying the Other End of a Socket
+  - title: Finding Your Own Name and Address
+  - title: Closing a Socket After Forking
+  - title: Writing Bidirectional Clients
+  - title: Forking Servers
+  - title: Pre-Forking Servers
+  - title: Non-Forking Servers
+  - title: Multitasking Server with Threads
+  - title: Writing a Multitasking Server with POE
+  - title: Writing a Multihomed Server
+  - title: Making a Daemon Server
+  - title: Restarting a Server on Demand
+  - title: Managing Multiple Streams of Input
+- title: Internet Services
+  recipes:
+  - title: Simple DNS Lookups
+  - title: Being an FTP Client
+  - title: Sending Mail
+  - title: Reading and Posting Usenet News Messages
+  - title: Reading Mail with POP3
+  - title: Simulating Telnet from a Program
+  - title: Pinging a Machine
+  - title: Accessing an LDAP Server
+  - title: Sending Attachments in Mail
+  - title: Extracting Attachments from Mail
+  - title: Writing an XML-RPC Server
+  - title: Writing an XML-RPC Client
+  - title: Writing a SOAP Server
+  - title: Writing a SOAP Client
+- title: Web Automation
+  recipes:
+  - title: Fetching a URL from a Perl Script
+  - title: Automating Form Submission
+  - title: Extracting URLs
+  - title: Converting ASCII to HTML
+  - title: Converting HTML to ASCII
+  - title: Extracting or Removing HTML Tags
+  - title: Finding Stale Links
+  - title: Finding Fresh Links
+  - title: Using Templates to Generate HTML
+  - title: Mirroring Web Pages
+  - title: Creating a Robot
+  - title: Parsing a Web Server Log File
+  - title: Processing Server Logs
+  - title: Using Cookies
+  - title: Fetching Password-Protected Pages
+  - title: Fetching https:// Web Pages
+  - title: Resuming an HTTP GET
+  - title: Parsing HTML
+  - title: Extracting Table Data

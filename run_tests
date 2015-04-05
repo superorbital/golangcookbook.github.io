@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-for file in $(find chapters -name "test.go"); do
-  echo "$file"
-	expected=${file/.go/.expected}
-	if [ -f $expected ]; then
-  	diff <( go run $file) $expected
-	else
-		echo "$expected not found - generating it..."
-		go run $file > $expected
-	fi
+for file in $(find chapters -name "test*.go"); do
+  echo -n "."
+  expected=${file/.go/.expected}
+  if [ -f $expected ]; then
+    diff <( go run $file) $expected
+  else
+    echo "$expected not found - generating it..."
+    go run $file > $expected
+  fi
 done
+echo
