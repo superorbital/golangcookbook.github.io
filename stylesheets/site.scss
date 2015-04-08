@@ -30,3 +30,17 @@ p.warning {
   min-height: 50px;
 }
 
+
+.example {
+  padding: 0px;
+  margin-bottom: 20px;
+  pre { 
+    margin: 0; 
+    padding: 10px 10px;
+  }
+  .output pre, .output code {
+    .shell { color: #aaaaaa; }
+    background: #333333;
+    color: white;
+  }
+}
