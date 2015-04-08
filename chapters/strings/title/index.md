@@ -41,67 +41,16 @@ func Title(s string) string {
 
 The flaw in this implementation is that it doesn't account for small words. For example:  
 
-```
-// test.go
-package main
-
-import (
-	"fmt"
-	"strings"
-)
-
-func main() {
-	fmt.Println(strings.Title("welcome to the dollhouse!"))
-}
-```
-
-...when run, will produce:
-
-```
-$ go run test.go
-Welcome To The Dollhouse!
-```
+{% include example.html example="simple" %}
 
 ### Welcome _to the_ Dollhouse!
 
 Our English professors wouldn't be happy with the results.  Small words, such as "a" and "the" shouldn't be capitalized in a title.  In order to _properly_ capitalize a string, we have to do a bit more work.  
 
-``` go
-// test.go
-package main
-
-import (
-	"fmt"
-	"strings"
-)
-
-func properTitle(input string) string {
-	words := strings.Fields(input)
-	smallwords := " a an on the to "
-
-	for index, word := range words {
-		if strings.Contains(smallwords, " "+word+" ") {
-			words[index] = word
-		} else {
-			words[index] = strings.Title(word)
-		}
-	}
-	return strings.Join(words, " ")
-}
-
-
-func main() {
-	fmt.Println(properTitle("welcome to the dollhouse!"))
-}
-```
+{% include example.html example="proper" %}
 
 In the implementation above, we first split the string into an array of words, loop through them, and only capitalize those who don't match our hard-coded list of small words.  Finally, we join the words up into a single string, and return the result.  
 
 Go doesn't have anything like an `array.Includes(element)` predicate, so we get a bit clever when determining if the word is a small word by making use of spaces as word boundaries.
 
-When run, the printed title is grammatically correct:
-
-```
-$ go run test.go
-Welcome to the Dollhouse!
-```
+As you can see in the output above, the printed title is grammatically correct.
