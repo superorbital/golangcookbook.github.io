@@ -1,13 +1,7 @@
 ---
 title: Cross Compiling
-layout: default
+question: How do I compile a binary designed to run on a different platform than my local host?
 ---
-
-## {{ page.title }}
-{:.recipe}
-
-How do I compile a binary designed to run on a different platform than my local host?
-{:.question}
 
 Since Go is a statically compiled language, it's well designed for producing tiny, pre-compiled tools.  This is great for Unix administrators or DevOps engineers, as they can send their tools with them when they work on remove systems.  However, many developers use OS X or Windows on their local machine, and another OS like Linux on others.  How do you use one system to compile binaries that will work on the other?  This is called cross-compiling, and it's pretty simple with Go.
 

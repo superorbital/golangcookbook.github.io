@@ -1,12 +1,12 @@
 <div class="example">
-	<div class="input">
+  <div class="input">
     <tt class="filename">File: <a href="./test_{{ include.example }}.go">test_{{ include.example }}.go</a></tt>
-		<pre><code>{% include_relative test_{{ include.example }}.go %}</code></pre>
-	</div>
+    <pre><code>{% include_relative test_{{ include.example }}.go %}</code></pre>
+  </div>
 
-	<div class="output">
-		<pre><code><span class="shell">$ go run test_{{include.example}}.go</span>
+  <div class="output">
+    <pre><code><span class="shell">$ go run test_{{include.example}}.go</span>
 {% include_relative test_{{ include.example }}.expected %}</code></pre>
-	</div>
+  </div>
 </div>
 

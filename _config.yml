@@ -4,3 +4,8 @@ kramdown:
   input: GFM
 sass:
   style: :compressed
+defaults:
+  - scope:
+      path: "chapters"
+    values:
+      layout: recipe

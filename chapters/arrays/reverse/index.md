@@ -1,13 +1,7 @@
 ---
 title: Reversing an Array
-layout: default
+question: How do I reverse an array?
 ---
-
-## {{ page.title }}
-{:.recipe}
-
-How do I reverse an array?
-{:.question}
 
 Reversing an array is fairly straightforward in Go, due to multiple return values.  Simply loop through the first half of the array, swapping each element in turn with its mirror counterpart:
 
