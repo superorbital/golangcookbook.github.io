@@ -1,13 +1,7 @@
 ---
-layout: default
 title: Accessing Substrings
+question: Given a string, how do I access parts of it by index, regular expression, or other means?
 ---
-
-## {{ page.title }}
-{:.recipe}
-
-Given a string, how do I access parts of it by index, regular expression, or other means?
-{:.question}
 
 Given that it's such a 
 

@@ -1,13 +1,7 @@
 ---
-layout: default
 title: Properly Capitalizing a Title
+question: How do I convert a string into a properly capitalized title?
 ---
-
-## {{ page.title }}
-{:.recipe}
-
-How do I convert a string into a properly capitalized title?
-{:.question}
 
 ### Welcome To The Dollhouse?
 

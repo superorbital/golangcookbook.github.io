@@ -1,13 +1,7 @@
 ---
 title: Running a file via a shebang line
-layout: default
+question: How can I add a shebang line to the top of my Go file in order to run it directly, as though it were an interpreted script?
 ---
-
-## {{ page.title }}
-{:.recipe}
-
-How can I add a shebang line to the top of my Go file in order to run it directly, as though it were an interpreted script?
-{:.question}
 
 ### "Shebang??"
 
