@@ -7,6 +7,10 @@ Given that it's such a
 
 ### Detecting Substrings
 
+{% include example.html example="detecting" %}
+
 ### Accessing by Index
+
+{% include example.html example="index" %}
 
 ### Splitting into 
