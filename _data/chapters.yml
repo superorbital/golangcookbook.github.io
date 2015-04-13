@@ -12,7 +12,10 @@
   - title: Accessing Substrings
     path: /chapters/strings/substrings
     wip: true
-  - title: Processing a String One Character at a Time
+  - title: Replacing Substrings and Characters in a String
+  - title: Processing a String One Word or Character at a Time
+    path: /chapters/strings/processing
+    wip: true
   - title: Reversing a String by Word or Character
   - title: Expanding and Compressing Tabs
   - title: Expanding Variables in User Input

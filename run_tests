@@ -8,8 +8,11 @@ for file in $(find chapters -name "test*.go"); do
 		if diff <( go run $file) $expected > /dev/null; then
 			echo -n .
 		else
-			echo $file >> test_output
+			echo "Failed: $file" >> test_output
+			echo "  To reset, run:" >> test_output
+			echo "  rm $expected" >> test_output
 			diff -y <( go run $file) $expected >> test_output
+			echo >> test_output
 			echo -n x
 		fi
   else
