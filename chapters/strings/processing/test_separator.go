@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	words := strings.Split("one:two:three", ":")
+	s := "root:*:0:0:System Administrator:/root:/bin/sh"
+	words := strings.Split(s, ":")
 	for i, word := range words {
 		fmt.Println(i, " => ", word)
 	}
