@@ -1,11 +1,13 @@
 - title: Running & Packaging
   recipes:
   - title: Running a One-Off File
+    path: /chapters/running/one-off
   - title: Cross Compiling
     path: /chapters/running/cross-compiling
   - title: Building a binary
   - title: Running a file via a shebang line
     path: /chapters/running/shebang
+  - title: Exploring Go with a REPL
   - title: Managing dependencies
 - title: Strings
   recipes:
@@ -147,7 +149,6 @@
   - title: Reading an Entire Line Without Blocking
 - title: File Contents
   recipes:
-  - title: Reading Lines with Continuation Characters
   - title: Counting Lines (or Paragraphs or Records) in a File
   - title: Processing Every Word in a File
   - title: Reading a File Backward by Line or Paragraph
@@ -164,12 +165,10 @@
   - title: Reading Fixed-Length Records
   - title: Reading Configuration Files
   - title: Testing a File for Trustworthiness
-  - title: Treating a File as an Array
-  - title: Setting the Default I/O Layers
   - title: Reading or Writing Unicode from a Filehandle
-  - title: Converting Microsoft Text Files into Unicode
   - title: Comparing the Contents of Two Files
-  - title: Pretending a String Is a File
+  - title: Reading and writing JSON files
+  - title: Reading and writing YAML files
 - title: Directories
   recipes:
   - title: Getting and Setting Timestamps
