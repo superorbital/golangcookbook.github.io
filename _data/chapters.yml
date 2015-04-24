@@ -11,8 +11,11 @@
   - title: Managing dependencies
 - title: Strings
   recipes:
+  - title: Detecting Substrings
+    path: /chapters/strings/detecting
+    wip: true
   - title: Accessing Substrings
-    path: /chapters/strings/substrings
+    path: /chapters/strings/accessing
     wip: true
   - title: Replacing Substrings and Characters in a String
   - title: Processing a String One Word or Character at a Time
