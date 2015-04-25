@@ -34,6 +34,12 @@ p.warning {
 .example {
   padding: 0px;
   margin-bottom: 20px;
+	.filename {
+		display: block;
+		font-size: 75%;
+		text-align: right;
+		color: #ccc;
+	}
   pre { 
     margin: 0; 
     padding: 10px 10px;
