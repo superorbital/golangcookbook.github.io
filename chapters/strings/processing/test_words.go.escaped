@@ -1,0 +1,13 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strings&quot;
+)
+
+func main() {
+	words := strings.Fields(&quot;This, that, and the other.&quot;)
+	for i, word := range words {
+		fmt.Println(i, &quot; =&gt; &quot;, word)
+	}
+}

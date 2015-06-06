@@ -1,0 +1,16 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strings&quot;
+)
+
+func main() {
+	fmt.Println(strings.Contains(&quot;Assume&quot;, &quot;Ass&quot;))
+
+	fmt.Println(strings.ContainsAny(&quot;team&quot;, &quot;i&quot;))
+	fmt.Println(strings.ContainsAny(&quot;Hello&quot;, &quot;aeiou&y&quot;))
+
+	fmt.Println(strings.HasPrefix(&quot;Hello World&quot;, &quot;Hello&quot;))
+	fmt.Println(strings.HasSuffix(&quot;Hello World&quot;, &quot;World&quot;))
+}

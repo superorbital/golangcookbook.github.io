@@ -1,0 +1,16 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;regexp&quot;
+)
+
+func main() {
+	s := &quot;[one][two][three]&quot;
+	words := regexp.MustCompile(&quot;a*&quot;).Split(s, -1)
+	if words != nil {
+		for i, word := range words {
+			fmt.Println(i, &quot; =&gt; &quot;, word)
+		}
+	}
+}

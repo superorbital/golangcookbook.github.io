@@ -1,0 +1,23 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strings&quot;
+)
+
+func main() {
+	removePunctuation := func(r rune) rune {
+		if strings.ContainsRune(&quot;.,:;&quot;, r) {
+			return -1
+		} else {
+			return r
+		}
+	}
+
+	s := &quot;This, that, and the other.&quot;
+	s = strings.Map(removePunctuation, s)
+	words := strings.Fields(s)
+	for i, word := range words {
+		fmt.Println(i, &quot; =&gt; &quot;, word)
+	}
+}

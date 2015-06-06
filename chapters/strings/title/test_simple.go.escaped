@@ -1,0 +1,10 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strings&quot;
+)
+
+func main() {
+	fmt.Println(strings.Title(&quot;welcome to the dollhouse!&quot;))
+}

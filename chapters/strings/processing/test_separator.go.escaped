@@ -1,0 +1,14 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strings&quot;
+)
+
+func main() {
+	s := &quot;root:*:0:0:System Administrator:/root:/bin/sh&quot;
+	words := strings.Split(s, &quot;:&quot;)
+	for i, word := range words {
+		fmt.Println(i, &quot; =&gt; &quot;, word)
+	}
+}

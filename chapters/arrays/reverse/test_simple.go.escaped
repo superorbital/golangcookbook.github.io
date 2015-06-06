@@ -1,0 +1,16 @@
+package main
+
+import &quot;fmt&quot;
+
+func reverse(numbers []int) []int {
+	for i := 0; i &lt; len(numbers)/2; i++ {
+		j := len(numbers) - i - 1
+		numbers[i], numbers[j] = numbers[j], numbers[i]
+	}
+	return numbers
+}
+
+func main() {
+	fmt.Printf(&quot;%v\n&quot;, reverse([]int{1, 2, 3, 4, 5}))
+	fmt.Printf(&quot;%v\n&quot;, reverse([]int{1, 2, 3, 4}))
+}

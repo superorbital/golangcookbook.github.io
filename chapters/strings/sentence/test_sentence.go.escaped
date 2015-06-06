@@ -1,0 +1,20 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strings&quot;
+)
+
+func ToSentence(words []string, andOrOr string) string {
+	l := len(words)
+	wordsForSentence := make([]string, l)
+	copy(wordsForSentence, words)
+	wordsForSentence[l-1] = andOrOr + &quot; &quot; + wordsForSentence[l-1]
+	return strings.Join(wordsForSentence, &quot;, &quot;)
+}
+
+func main() {
+	a := []string{&quot;this&quot;, &quot;that&quot;, &quot;the other&quot;}
+	fmt.Println(ToSentence(a, &quot;or&quot;))
+	fmt.Println(ToSentence(a, &quot;and&quot;))
+}

@@ -4,7 +4,8 @@ echo > test_output
 
 for file in $(find chapters -name "test*.go"); do
   expected=${file/.go/.expected}
-  escaped=${expected}.escaped
+  escapedoutput=${expected}.escaped
+  escapedfile=${file}.escaped
 
   if [ -f $expected ]; then
     if diff <( go run $file 2>&1) $expected > /dev/null; then
@@ -14,17 +15,22 @@ for file in $(find chapters -name "test*.go"); do
       echo "  To reset, run:" >> test_output
       echo "  rm $expected" >> test_output
       diff -y <( go run $file 2>&1) $expected >> test_output
+      echo "------------------------" >> test_output
       echo >> test_output
       echo -n x
     fi
+    sed 's/&(?!amp;)/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' < \
+      $file > \
+      $escapedfile
   else
     echo
     echo "$expected not found - generating it..."
     go run $file > $expected
     sed 's/&(?!amp;)/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' < \
       $expected > \
-      $escaped
+      $escapedoutput
   fi
 done
+
 echo
 cat test_output

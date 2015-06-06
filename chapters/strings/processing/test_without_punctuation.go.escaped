@@ -1,0 +1,16 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strings&quot;
+)
+
+func main() {
+	s := &quot;This, that, and the other.&quot;
+	replacer := strings.NewReplacer(&quot;,&quot;, &quot;&quot;, &quot;.&quot;, &quot;&quot;, &quot;;&quot;, &quot;&quot;)
+	s = replacer.Replace(s)
+	words := strings.Fields(s)
+	for i, word := range words {
+		fmt.Println(i, &quot; =&gt; &quot;, word)
+	}
+}

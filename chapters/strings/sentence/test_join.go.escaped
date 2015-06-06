@@ -1,0 +1,11 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strings&quot;
+)
+
+func main() {
+	a := []string{&quot;this&quot;, &quot;that&quot;, &quot;the other&quot;}
+	fmt.Println(strings.Join(a, &quot;, &quot;))
+}

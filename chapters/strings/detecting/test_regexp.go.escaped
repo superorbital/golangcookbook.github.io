@@ -1,0 +1,15 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;regexp&quot;
+)
+
+func main() {
+	matched, err := regexp.MatchString(&quot;Wor.*&quot;, &quot;Hello World&quot;)
+	fmt.Println(&quot;Matched:&quot;, matched, &quot;Error:&quot;, err)
+	matched, err = regexp.MatchString(&quot;Good.*&quot;, &quot;Hello World&quot;)
+	fmt.Println(&quot;Matched:&quot;, matched, &quot;Error:&quot;, err)
+	matched, err = regexp.MatchString(&quot;(bad regexp&quot;, &quot;Hello World&quot;)
+	fmt.Println(&quot;Matched:&quot;, matched, &quot;Error:&quot;, err)
+}

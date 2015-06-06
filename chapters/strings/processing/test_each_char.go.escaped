@@ -1,0 +1,9 @@
+package main
+
+import &quot;fmt&quot;
+
+func main() {
+	for i, c := range &quot;abc&quot; {
+		fmt.Println(i, &quot; =&gt; &quot;, string(c))
+	}
+}

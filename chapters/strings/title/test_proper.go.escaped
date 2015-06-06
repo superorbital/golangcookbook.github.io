@@ -1,0 +1,24 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strings&quot;
+)
+
+func properTitle(input string) string {
+	words := strings.Fields(input)
+	smallwords := &quot; a an on the to &quot;
+
+	for index, word := range words {
+		if strings.Contains(smallwords, &quot; &quot;+word+&quot; &quot;) {
+			words[index] = word
+		} else {
+			words[index] = strings.Title(word)
+		}
+	}
+	return strings.Join(words, &quot; &quot;)
+}
+
+func main() {
+	fmt.Println(properTitle(&quot;welcome to the dollhouse!&quot;))
+}
