@@ -5,242 +5,409 @@
   - title: Cross Compiling
     path: /chapters/running/cross-compiling
   - title: Building a binary
+    path: false
   - title: Running a file via a shebang line
     path: /chapters/running/shebang
   - title: Exploring Go with a REPL
+    path: false
   - title: Managing dependencies
+    path: false
 - title: Strings
   recipes:
-  - title: Detecting Substrings
+  - title: Concatenating Strings
+    path: /chapters/strings/concatenation
+    wip: true
+  - title: Detecting a Substring
     path: /chapters/strings/detecting
+    wip: true
+  - title: Detecting All Substrings
+    path: /chapters/strings/detecting-all
     wip: true
   - title: Accessing Substrings
     path: /chapters/strings/accessing
     wip: true
-  - title: Replacing Substrings and Characters in a String
   - title: Processing a String One Word or Character at a Time
     path: /chapters/strings/processing
+    wip: true
+  - title: Processing a String by Complex Separators and Patterns
+    path: /chapters/strings/processing-complex
+    wip: true
   - title: Reversing a String by Word or Character
+    path: false
+  - title: Replacing Parts of a String
+    path: false
   - title: Expanding and Compressing Tabs
+    path: false
   - title: Expanding Variables in User Input
+    path: false
   - title: Interpolating Functions and Expressions Within Strings
+    path: false
   - title: Indenting Here Documents
+    path: false
   - title: Escaping Characters
+    path: false
   - title: Trimming Blanks from the Ends of a String
+    path: false
   - title: Controlling Case
+    path: false
   - title: Properly Capitalizing a Title
     path: /chapters/strings/title
   - title: Turning an Array into a Sentence
     path: /chapters/strings/sentence
   - title: Parsing Comma-Separated Data
+    path: false
 - title: Numbers
   recipes:
   - title: Checking Whether a String Is a Valid Number
+    path: false
   - title: Rounding Floating-Point Numbers
+    path: false
   - title: Comparing Floating-Point Numbers
+    path: false
   - title: Operating on a Series of Integers
+    path: false
   - title: Working with Roman Numerals
+    path: false
   - title: Generating Random Numbers
+    path: false
   - title: Generating Repeatable Random Number Sequences
+    path: false
   - title: Making Numbers Even More Random
+    path: false
   - title: Generating Biased Random Numbers
+    path: false
   - title: Doing Trigonometry in Degrees, Not Radians
+    path: false
   - title: Calculating More Trigonometric Functions
+    path: false
   - title: Taking Logarithms
+    path: false
   - title: Multiplying Matrices
+    path: false
   - title: Using Complex Numbers
+    path: false
   - title: Converting Binary, Octal, and Hexadecimal Numbers
+    path: false
   - title: Putting Commas in Numbers
+    path: false
   - title: Printing Correct Plurals
+    path: false
 - title: Dates and Times
   recipes:
   - title: Finding Today's Date
+    path: false
   - title: Converting DMYHMS to Epoch Seconds
+    path: false
   - title: Converting Epoch Seconds to DMYHMS
+    path: false
   - title: Adding to or Subtracting from a Date
+    path: false
   - title: Difference of Two Dates
+    path: false
   - title: Day in a Week/Month/Year or Week Number
+    path: false
   - title: Parsing Dates and Times from Strings
+    path: false
   - title: Printing a Date
+    path: false
   - title: High-Resolution Timers
+    path: false
   - title: Short Sleeps
+    path: false
 - title: Arrays
   recipes:
   - title: Specifying a List in Your Program
+    path: false
   - title: Printing a List with Commas
+    path: false
   - title: Changing Array Size
+    path: false
   - title: Implementing a Sparse Array
+    path: false
   - title: Iterating Over an Array
+    path: false
   - title: Iterating Over an Array by Reference
+    path: false
   - title: Extracting Unique Elements from a List
+    path: false
   - title: Finding Elements in One Array but Not Another
+    path: false
   - title: Computing Union, Intersection, or Difference of Unique Lists
+    path: false
   - title: Appending One Array to Another
+    path: false
   - title: Reversing an Array
     path: /chapters/arrays/reverse
   - title: Processing Multiple Elements of an Array
+    path: false
   - title: Finding the First List Element That Passes a Test
+    path: false
   - title: Finding All Elements in an Array Matching Certain Criteria
+    path: false
   - title: Sorting an Array Numerically
+    path: false
   - title: Sorting a List by Computable Field
+    path: false
   - title: Implementing a Circular List
+    path: false
   - title: Randomizing an Array
+    path: false
 - title: Maps
   recipes:
   - title: Adding an Element to a Hash
+    path: false
   - title: Testing for the Presence of a Key in a Hash
+    path: false
   - title: Creating a Hash with Immutable Keys or Values
+    path: false
   - title: Deleting from a Hash
+    path: false
   - title: Traversing a Hash
+    path: false
   - title: Printing a Hash
+    path: false
   - title: Retrieving from a Hash in Insertion Order
+    path: false
   - title: Hashes with Multiple Values per Key
+    path: false
   - title: Inverting a Hash
+    path: false
   - title: Sorting a Hash
+    path: false
   - title: Merging Hashes
+    path: false
   - title: Finding Common or Different Keys in Two Hashes
+    path: false
   - title: Hashing References
+    path: false
   - title: Presizing a Hash
+    path: false
   - title: Finding the Most Common Anything
+    path: false
   - title: Representing Relationships Between Data
-- title: Pattern Matching
-  recipes:
-  - title: Copying and Substituting Simultaneously
-  - title: Matching Letters
-  - title: Matching Words
-  - title: Commenting Regular Expressions
-  - title: Finding the Nth Occurrence of a Match
-  - title: Matching Within Multiple Lines
-  - title: Reading Records with a Separator
-  - title: Extracting a Range of Lines
-  - title: Matching Shell Globs as Regular Expressions
-  - title: Speeding Up Interpolated Matches
-  - title: Testing for a Valid Pattern
-  - title: Honoring Locale Settings in Regular Expressions
-  - title: Approximate Matching
-  - title: Matching from Where the Last Pattern Left Off
-  - title: Greedy and Non-Greedy Matches
-  - title: Detecting Doubled Words
-  - title: Matching Nested Patterns
-  - title: Expressing AND, OR, and NOT in a Single Pattern
-  - title: Matching a Valid Mail Address
-  - title: Matching Abbreviations
+    path: false
 - title: File Access
   recipes:
   - title: Opening a File
+    path: false
   - title: Opening Files with Unusual Filenames
+    path: false
   - title: Expanding Tildes in Filenames
+    path: false
   - title: Making Perl Report Filenames in Error Messages
+    path: false
   - title: Storing Filehandles into Variables
+    path: false
   - title: Writing a Subroutine That Takes Filehandles as Built-ins Do
+    path: false
   - title: Caching Open Output Filehandles
+    path: false
   - title: Printing to Many Filehandles Simultaneously
+    path: false
   - title: Opening and Closing File Descriptors by Number
+    path: false
   - title: Copying Filehandles
+    path: false
   - title: Creating Temporary Files
+    path: false
   - title: Storing a File Inside Your Program Text
+    path: false
   - title: Storing Multiple Files in the DATA Area
+    path: false
   - title: Writing a Unix-Style Filter Program
+    path: false
   - title: Modifying a File in Place with a Temporary File
+    path: false
   - title: Modifying a File in Place with the -i Switch
+    path: false
   - title: Modifying a File in Place Without a Temporary File
+    path: false
   - title: Locking a File
+    path: false
   - title: Flushing Output
+    path: false
   - title: Doing Non-Blocking I/O
+    path: false
   - title: Determining the Number of Unread Bytes
+    path: false
   - title: Reading from Many Filehandles Without Blocking
+    path: false
   - title: Reading an Entire Line Without Blocking
+    path: false
 - title: File Contents
   recipes:
   - title: Counting Lines (or Paragraphs or Records) in a File
+    path: false
   - title: Processing Every Word in a File
+    path: false
   - title: Reading a File Backward by Line or Paragraph
+    path: false
   - title: Trailing a Growing File
+    path: false
   - title: Picking a Random Line from a File
+    path: false
   - title: Randomizing All Lines
+    path: false
   - title: Reading a Particular Line in a File
+    path: false
   - title: Processing Variable-Length Text Fields
+    path: false
   - title: Removing the Last Line of a File
+    path: false
   - title: Processing Binary Files
+    path: false
   - title: Using Random-Access I/O
+    path: false
   - title: Updating a Random-Access File
+    path: false
   - title: Reading a String from a Binary File
+    path: false
   - title: Reading Fixed-Length Records
+    path: false
   - title: Reading Configuration Files
+    path: false
   - title: Testing a File for Trustworthiness
+    path: false
   - title: Reading or Writing Unicode from a Filehandle
+    path: false
   - title: Comparing the Contents of Two Files
+    path: false
   - title: Reading and writing JSON files
+    path: false
   - title: Reading and writing YAML files
+    path: false
 - title: Directories
   recipes:
   - title: Getting and Setting Timestamps
+    path: false
   - title: Deleting a File
+    path: false
   - title: Copying or Moving a File
+    path: false
   - title: Recognizing Two Names for the Same File
+    path: false
   - title: Processing All Files in a Directory
+    path: false
   - title: Globbing, or Getting a List of Filenames Matching a Pattern
+    path: false
   - title: Processing All Files in a Directory Recursively
+    path: false
   - title: Removing a Directory and Its Contents
+    path: false
   - title: Renaming Files
+    path: false
   - title: Splitting a Filename into Its Component Parts
+    path: false
   - title: Working with Symbolic File Permissions Instead of Octal Values
+    path: false
 - title: Goroutines
 - title: Sockets
   recipes:
   - title: Writing a TCP Client
+    path: false
   - title: Writing a TCP Server
+    path: false
   - title: Communicating over TCP
+    path: false
   - title: Setting Up a UDP Client
+    path: false
   - title: Setting Up a UDP Server
+    path: false
   - title: Using Unix Domain Sockets
+    path: false
   - title: Identifying the Other End of a Socket
+    path: false
   - title: Finding Your Own Name and Address
+    path: false
   - title: Closing a Socket After Forking
+    path: false
   - title: Writing Bidirectional Clients
+    path: false
   - title: Forking Servers
+    path: false
   - title: Pre-Forking Servers
+    path: false
   - title: Non-Forking Servers
+    path: false
   - title: Multitasking Server with Threads
+    path: false
   - title: Writing a Multitasking Server with POE
+    path: false
   - title: Writing a Multihomed Server
+    path: false
   - title: Making a Daemon Server
+    path: false
   - title: Restarting a Server on Demand
+    path: false
   - title: Managing Multiple Streams of Input
+    path: false
 - title: Internet Services
   recipes:
   - title: Simple DNS Lookups
+    path: false
   - title: Being an FTP Client
+    path: false
   - title: Sending Mail
+    path: false
   - title: Reading and Posting Usenet News Messages
+    path: false
   - title: Reading Mail with POP3
+    path: false
   - title: Simulating Telnet from a Program
+    path: false
   - title: Pinging a Machine
+    path: false
   - title: Accessing an LDAP Server
+    path: false
   - title: Sending Attachments in Mail
+    path: false
   - title: Extracting Attachments from Mail
+    path: false
   - title: Writing an XML-RPC Server
+    path: false
   - title: Writing an XML-RPC Client
+    path: false
   - title: Writing a SOAP Server
+    path: false
   - title: Writing a SOAP Client
+    path: false
 - title: Web Automation
   recipes:
   - title: Fetching a URL from a Perl Script
+    path: false
   - title: Automating Form Submission
+    path: false
   - title: Extracting URLs
+    path: false
   - title: Converting ASCII to HTML
+    path: false
   - title: Converting HTML to ASCII
+    path: false
   - title: Extracting or Removing HTML Tags
+    path: false
   - title: Finding Stale Links
+    path: false
   - title: Finding Fresh Links
+    path: false
   - title: Using Templates to Generate HTML
+    path: false
   - title: Mirroring Web Pages
+    path: false
   - title: Creating a Robot
+    path: false
   - title: Parsing a Web Server Log File
+    path: false
   - title: Processing Server Logs
+    path: false
   - title: Using Cookies
+    path: false
   - title: Fetching Password-Protected Pages
+    path: false
   - title: Fetching https:// Web Pages
+    path: false
   - title: Resuming an HTTP GET
+    path: false
   - title: Parsing HTML
+    path: false
   - title: Extracting Table Data
+    path: false

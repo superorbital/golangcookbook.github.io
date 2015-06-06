@@ -30,3 +30,4 @@ Or we can achieve a bit more clarity by making use of `strings.Map`:
 There are other situations where you'd want to split a string based on a separator other than whitespace.  The UNIX `/etc/passwd` file, for example, contains lines of tokens separated by colons.  Splitting each line into the relevant pieces is easy in Go, with the `strings.Split` function, which is a more generic form of `strings.Fields`:
 
 {% include example.html example="separator" %}
+
