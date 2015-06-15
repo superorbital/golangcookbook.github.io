@@ -16,14 +16,11 @@ for file in $file_list; do
       echo "Failed: $file" >> test_output
       echo "  To reset, run:" >> test_output
       echo "  rm $expected" >> test_output
-      diff -y <( go run $file 2>&1) $expected >> test_output
+      diff -yW200 <( go run $file 2>&1) $expected >> test_output
       echo "------------------------" >> test_output
       echo >> test_output
       echo -n x
     fi
-    sed 's/&(?!amp;)/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' < \
-      $file > \
-      $escapedfile
   else
     echo
     echo "$expected not found - generating it..."
@@ -32,6 +29,9 @@ for file in $file_list; do
       $expected > \
       $escapedoutput
   fi
+  sed 's/&(?!amp;)/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' < \
+    $file > \
+    $escapedfile
 done
 
 echo

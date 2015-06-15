@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	s := "[one][two][three]"
-	words := regexp.MustCompile("a*").Split(s, -1)
+	s := "one#two;three"
+	words := regexp.MustCompile("[#;]").Split(s, -1)
 	if words != nil {
 		for i, word := range words {
 			fmt.Println(i, " => ", word)
