@@ -1,38 +1,56 @@
 #!/usr/bin/env bash
 
-echo > test_output
+test_output=/tmp/test_output.$$
 
 file_list=${@:-$(find chapters -name "test*.go")}
 
+print_success() { echo -n .; }
+print_failure() { echo -n x; }
+print_pending() { echo -n p; }
+
+print_output() { echo; cat $test_output; }
+run_test() { diff <( go run $1 2>&1) $2 > /dev/null; }
+
+record_failure() {
+  echo "Failed: $1" >> $test_output
+  echo "  To reset, run:" >> $test_output
+  echo "  rm $2" >> $test_output
+  diff -yW200 <( go run $1 2>&1) $2 >> $test_output
+  echo "------------------------" >> $test_output
+  echo >> $test_output
+}
+
+generate_expected() {
+  echo
+  echo "$2 not found - generating it..."
+  go run $1 > $2
+}
+
+generate_escaped() {
+  sed 's/&(?!amp;)/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' < $1 > $1.escaped
+}
+
 for file in $file_list; do
   expected=${file/.go/.expected}
-  escapedoutput=${expected}.escaped
-  escapedfile=${file}.escaped
 
-  if [ -f $expected ]; then
-    if diff <( go run $file 2>&1) $expected > /dev/null; then
-      echo -n .
+  if [ -s $file ]; then
+    if [ -f $expected ]; then
+      if run_test $file $expected; then
+        print_success
+      else
+        record_failure $file $expected
+        print_failure
+      fi
     else
-      echo "Failed: $file" >> test_output
-      echo "  To reset, run:" >> test_output
-      echo "  rm $expected" >> test_output
-      diff -yW200 <( go run $file 2>&1) $expected >> test_output
-      echo "------------------------" >> test_output
-      echo >> test_output
-      echo -n x
+      generate_expected $file $expected
     fi
   else
-    echo
-    echo "$expected not found - generating it..."
-    go run $file > $expected
-    sed 's/&(?!amp;)/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' < \
-      $expected > \
-      $escapedoutput
+    print_pending
   fi
-  sed 's/&(?!amp;)/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' < \
-    $file > \
-    $escapedfile
+  generate_escaped $expected
+  generate_escaped $file
 done
 
-echo
-cat test_output
+print_output
+
+rm $test_output
