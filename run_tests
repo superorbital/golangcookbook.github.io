@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 test_output=/tmp/test_output.$$
+touch $test_output
 
 file_list=${@:-$(find chapters -name "test*.go")}
 
