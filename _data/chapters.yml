@@ -28,12 +28,10 @@
     wip: true
   - title: Processing a String One Word or Character at a Time
     path: /chapters/strings/processing
-    wip: true
   - title: Processing a String by Complex Separators and Patterns
     path: /chapters/strings/processing-complex
-    wip: true
   - title: Reversing a String by Word or Character
-    path: false
+    path: /chapters/strings/reverse
   - title: Replacing Parts of a String
     path: false
   - title: Expanding and Compressing Tabs
