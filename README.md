@@ -1,8 +1,8 @@
 # Go Cookbook
 
-Source for http://golangcookbook.com
+Source for [the Go Cookbook](http://golangcookbook.com).
 
-### Run
+### Run locally
 
 ```
 $ bundle install
@@ -12,7 +12,17 @@ $ open http://localhost:4000
 
 ### Run the tests
 
-TODO
+```
+$ ./run_tests
+```
+
+...or...
+
+```
+$ ./run_tests chapters/strings/reverse/test_reverse_by_character.go
+```
+
+The `run_tests` script not only runs the tests, but also ensures that the `.expected`, `.go.escaped`, and `.expected.escaped` files are in place.  These files are then used in the chapter templates to ensure all examples are up to date and correct.
 
 ### License
 
