@@ -56,6 +56,8 @@
     path: false
 - title: Numbers
   recipes:
+  - title: Representing Enums in Go
+    path: /chapters/numbers/enums
   - title: Checking Whether a String Is a Valid Number
     path: false
   - title: Rounding Floating-Point Numbers
@@ -152,59 +154,37 @@
     path: false
 - title: Maps
   recipes:
-  - title: Adding an Element to a Hash
+  - title: Adding an Element to a Map
     path: false
-  - title: Testing for the Presence of a Key in a Hash
+  - title: Testing for the Presence of a Key in a Map
+    path: /chapters/maps/presence
+    wip: true
+  - title: Deleting from a Map
     path: false
-  - title: Creating a Hash with Immutable Keys or Values
+  - title: Traversing a Map
     path: false
-  - title: Deleting from a Hash
+  - title: Convert a Map into an Array of keys or values
     path: false
-  - title: Traversing a Hash
+    source: "http://stackoverflow.com/a/27398024"
+  - title: Printing a Map
     path: false
-  - title: Printing a Hash
+  - title: Mapes with Multiple Values per Key
     path: false
-  - title: Retrieving from a Hash in Insertion Order
+  - title: Inverting a Map
     path: false
-  - title: Hashes with Multiple Values per Key
+  - title: Sorting a Map
     path: false
-  - title: Inverting a Hash
+  - title: Merging Maps
     path: false
-  - title: Sorting a Hash
+  - title: Finding Common or Different Keys in Two Maps
     path: false
-  - title: Merging Hashes
-    path: false
-  - title: Finding Common or Different Keys in Two Hashes
-    path: false
-  - title: Hashing References
-    path: false
-  - title: Presizing a Hash
-    path: false
-  - title: Finding the Most Common Anything
-    path: false
-  - title: Representing Relationships Between Data
-    path: false
-- title: File Access
+- title: Files
   recipes:
-  - title: Opening a File
-    path: false
-  - title: Opening Files with Unusual Filenames
-    path: false
+  - title: Checking the Existence of a File
+    source: "http://stackoverflow.com/a/12518877/2620448"
+  - title: Reading and Writing to Files
+    path: /chapters/files/read-write
   - title: Expanding Tildes in Filenames
-    path: false
-  - title: Making Perl Report Filenames in Error Messages
-    path: false
-  - title: Storing Filehandles into Variables
-    path: false
-  - title: Writing a Subroutine That Takes Filehandles as Built-ins Do
-    path: false
-  - title: Caching Open Output Filehandles
-    path: false
-  - title: Printing to Many Filehandles Simultaneously
-    path: false
-  - title: Opening and Closing File Descriptors by Number
-    path: false
-  - title: Copying Filehandles
     path: false
   - title: Creating Temporary Files
     path: false
@@ -232,8 +212,6 @@
     path: false
   - title: Reading an Entire Line Without Blocking
     path: false
-- title: File Contents
-  recipes:
   - title: Counting Lines (or Paragraphs or Records) in a File
     path: false
   - title: Processing Every Word in a File
@@ -272,6 +250,7 @@
     path: false
   - title: Reading and writing JSON files
     path: false
+    source: "http://golang.org/pkg/encoding/json/#example_Decoder"
   - title: Reading and writing YAML files
     path: false
 - title: Directories
@@ -290,6 +269,7 @@
     path: false
   - title: Processing All Files in a Directory Recursively
     path: false
+    source: "http://stackoverflow.com/a/6612243/2620448"
   - title: Removing a Directory and Its Contents
     path: false
   - title: Renaming Files
@@ -299,6 +279,14 @@
   - title: Working with Symbolic File Permissions Instead of Octal Values
     path: false
 - title: Goroutines
+- title: Systems Programming
+  recipes:
+  - title: Catching signals
+    source: "http://stackoverflow.com/a/11269077/2620448"
+  - title: Running Child Processes
+    source: "http://stackoverflow.com/a/14885714/2620448"
+  - title: Processing Command-line Arguments
+    source: "https://golang.org/pkg/flag/"
 - title: Sockets
   recipes:
   - title: Writing a TCP Client
@@ -343,10 +331,10 @@
   recipes:
   - title: Simple DNS Lookups
     path: false
-  - title: Being an FTP Client
-    path: false
+    source: "http://golang.org/pkg/net/#LookupHost and http://miek.nl/posts/2014/Aug/16/go-dns-package/"
   - title: Sending Mail
     path: false
+    source: "https://code.google.com/p/go-wiki/wiki/SendingMail"
   - title: Reading and Posting Usenet News Messages
     path: false
   - title: Reading Mail with POP3
@@ -361,17 +349,16 @@
     path: false
   - title: Extracting Attachments from Mail
     path: false
-  - title: Writing an XML-RPC Server
+  - title: Writing a RESTful service
     path: false
-  - title: Writing an XML-RPC Client
+  - title: Connecting to MySQL
     path: false
-  - title: Writing a SOAP Server
+    source: "http://stackoverflow.com/questions/11353679/whats-the-recommended-way-to-connect-to-mysql-from-go"
+  - title: Connecting to PgSQL
+    source: "http://www.alexedwards.net/blog/practical-persistence-sql"
+  - title: Fetching a URL
     path: false
-  - title: Writing a SOAP Client
-    path: false
-- title: Web Automation
-  recipes:
-  - title: Fetching a URL from a Perl Script
+  - title: Setting HTTP Headers
     path: false
   - title: Automating Form Submission
     path: false
@@ -409,3 +396,5 @@
     path: false
   - title: Extracting Table Data
     path: false
+  - title: Processing POST requests
+    source: "http://stackoverflow.com/questions/15672556/handling-json-post-request-in-go"
