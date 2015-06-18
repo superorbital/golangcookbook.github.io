@@ -14,7 +14,6 @@ func main() {
 	}
 
 	for i, match := range matches {
-		// match is a tuple of [full_string, [submatches]]
 		full := match[0]
 		submatches := match[1:len(match)]
 		fmt.Printf(&quot;%v =&gt; \&quot;%v\&quot; from \&quot;%v\&quot;\n&quot;, i, submatches[0], full)
