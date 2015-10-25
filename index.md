@@ -3,8 +3,12 @@ layout: default
 title: Go Cookbook
 ---
 
+The Go Cookbook is built with the help of people like yourself.  Please support this site and help others by [contributing a recipe of your own](https://github.com/golangcookbook/golangcookbook.github.io#readme).
+
+---
+
 {% for chapter in site.data.chapters %}
-  <h3> {{ chapter.title }}</h3>
+### {{ chapter.title }}
 
   <ul>
   {% for recipe in chapter.recipes %}
