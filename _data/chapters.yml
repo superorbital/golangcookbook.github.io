@@ -59,7 +59,8 @@
   - title: Representing Enums in Go
     path: /chapters/numbers/enums
   - title: Checking Whether a String Is a Valid Number
-    path: false
+    path: /chapters/numbers/string_to_num
+    wip: true
   - title: Rounding Floating-Point Numbers
     path: false
   - title: Comparing Floating-Point Numbers
