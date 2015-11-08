@@ -1,0 +1,29 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;os&quot;
+	&quot;strconv&quot;
+)
+
+func handleError(err error) {
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+}
+
+func main() {
+	str := &quot;123&quot;
+	/*
+		The first argument to ParseInt is the string to be converted.
+		The second argument is the base to which the number is to be converted.
+		The third argument is the number of bits to which the number should fit.
+	*/
+	i, err := strconv.ParseInt(str, 10, 64)
+	handleError(err)
+	fmt.Printf(&quot;%T %d\n&quot;, i, i)
+	str = &quot;invalidString123&quot;
+	_, err = strconv.ParseInt(str, 10, 64)
+	handleError(err)
+}

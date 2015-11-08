@@ -1,0 +1,3 @@
+int64 123
+strconv.ParseInt: parsing &quot;invalidString123&quot;: invalid syntax
+exit status 1

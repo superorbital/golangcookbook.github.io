@@ -60,7 +60,8 @@
     path: /chapters/numbers/enums
     wip: true
   - title: Checking Whether a String Is a Valid Number
-    path: false
+    path: /chapters/numbers/string_to_num
+    wip: true
   - title: Rounding Floating-Point Numbers
     path: false
   - title: Comparing Floating-Point Numbers

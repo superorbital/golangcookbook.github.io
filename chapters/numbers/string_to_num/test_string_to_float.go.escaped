@@ -1,0 +1,21 @@
+package main
+
+import (
+	&quot;fmt&quot;
+	&quot;os&quot;
+	&quot;strconv&quot;
+)
+
+func main() {
+	str := &quot;123.123&quot;
+	/*
+		The first argument to ParseInt is the string to be converted.
+		The second argument is the number of bits to which the number should fit.
+	*/
+	i, err := strconv.ParseFloat(str, 64)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+	fmt.Printf(&quot;%T %f\n&quot;, i, i)
+}
