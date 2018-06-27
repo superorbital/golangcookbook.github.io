@@ -3,53 +3,55 @@
 test_output=/tmp/test_output.$$
 touch $test_output
 
-file_list=${@:-$(find chapters -name "test*.go")}
+file_list=${*:-$(find chapters -name "test*.go")}
 
 print_success() { echo -n .; }
 print_failure() { echo -n x; }
 print_pending() { echo -n p; }
 
 print_output() { echo; cat $test_output; }
-run_test() { diff <( go run $1 2>&1) $2 > /dev/null; }
+run_test() { diff <( go run "$1" 2>&1) "$2" > /dev/null; }
 
 record_failure() {
-  echo "Failed: $1" >> $test_output
-  echo "  To reset, run:" >> $test_output
-  echo "  rm $2" >> $test_output
-  diff -yW200 <( go run $1 2>&1) $2 >> $test_output
-  echo "------------------------" >> $test_output
-  echo >> $test_output
+  {
+    echo "Failed: $1"
+    echo "  To reset, run:"
+    echo "  rm $2"
+    diff -yW200 <( go run "$1" 2>&1) "$2"
+    echo "------------------------"
+    echo
+  } >> $test_output
 }
 
 generate_expected() {
   echo
   echo "$2 not found - generating it..."
-  go run $1 > $2
+  go run "$1" > "$2"
 }
 
 generate_escaped() {
-  sed 's/&(?!amp;)/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' < $1 > $1.escaped
+  sed 's/&(?!amp;)/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' < "$1" > "$1.escaped"
 }
 
 for file in $file_list; do
   expected=${file/.go/.expected}
 
-  if [ -s $file ]; then
-    if [ -f $expected ]; then
-      if run_test $file $expected; then
+  if [ -s "$file" ]; then
+    if [ -f "$expected" ]; then
+      if run_test "$file" "$expected"; then
         print_success
       else
-        record_failure $file $expected
+        record_failure "$file" "$expected"
         print_failure
       fi
     else
-      generate_expected $file $expected
+      generate_expected "$file" "$expected"
     fi
   else
     print_pending
   fi
-  generate_escaped $expected
-  generate_escaped $file
+  generate_escaped "$expected"
+  generate_escaped "$file"
 done
 
 print_output
