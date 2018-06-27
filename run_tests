@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
 test_output=/tmp/test_output.$$
-touch $test_output
+mkdir $test_output
 
 file_list=${*:-$(find chapters -name "test*.go")}
 
 print_success() { echo -n .; }
 print_failure() { echo -n x; }
 print_pending() { echo -n p; }
-
-print_output() { echo; cat $test_output; }
+print_output()  { echo; cat $test_output/*; }
 run_test() { diff <( go run "$1" 2>&1) "$2" > /dev/null; }
 
 record_failure() {
@@ -20,7 +19,7 @@ record_failure() {
     diff -yW200 <( go run "$1" 2>&1) "$2"
     echo "------------------------"
     echo
-  } >> $test_output
+  } >> "$test_output/${1//\//_}.out"
 }
 
 generate_expected() {
@@ -33,7 +32,8 @@ generate_escaped() {
   sed 's/&(?!amp;)/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g' < "$1" > "$1.escaped"
 }
 
-for file in $file_list; do
+process_file() {
+  file=$1
   expected=${file/.go/.expected}
 
   if [ -s "$file" ]; then
@@ -52,8 +52,14 @@ for file in $file_list; do
   fi
   generate_escaped "$expected"
   generate_escaped "$file"
+}
+
+for file in $file_list; do
+  process_file "$file" &
 done
+
+wait
 
 print_output
 
-rm $test_output
+rm -rf $test_output
