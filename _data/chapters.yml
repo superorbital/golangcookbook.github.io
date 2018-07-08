@@ -58,6 +58,7 @@
   recipes:
   - title: Representing Enums in Go
     path: /chapters/numbers/enums
+    wip: true
   - title: Checking Whether a String Is a Valid Number
     path: false
   - title: Rounding Floating-Point Numbers

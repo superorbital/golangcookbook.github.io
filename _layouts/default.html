@@ -21,7 +21,10 @@
     <header>
       <div class="inner">
         <h1><a href="/">{{ site.name }}</a></h1>
-        <h2>A community built and contributed collection of practical recipes for real world Golang development.</h2>
+        <h2>
+          Maintained by <a href="https://superorbit.al">SuperOrbital</a>.
+        </h2>
+        <h3>A community built and contributed collection of practical recipes for real world Golang development.</h3>
         <a href="{{ site.github.repository_url }}" class="button"><small>View project on</small> GitHub</a>
       </div>
     </header>
@@ -40,12 +43,12 @@
               The Go Cookbook is built by the community.
               <i>(That means you!)</i>
             </h3>
-            <h2><a href="https://github.com/golangcookbook/golangcookbook.github.io/edit/master/{{ page.path }}">Edit this page on github</a>.</h2>
-            <h2><a href="https://github.com/golangcookbook/golangcookbook.github.io/pulls">Submit a pull request with new content</a>.</h2>
+            <h2><a href="{{site.github.repository_url}}/edit/master/{{ page.path }}">Edit this page on github</a>.</h2>
+            <h2><a href="{{site.github.repository_url}}/pulls">Submit a pull request with new content</a>.</h2>
             You can also <a href="{{ site.github.repository_url }}/issues/new">submit an issue</a> 
             or 
-            <a href="mailto:me@tammersaleh.com">email Tammer Saleh</a>
-            (the maintainer) if you have questions.
+            <a href="mailto:tammer@superorbit.al">contact SuperOrbital</a>
+            if you have questions.
           </p>
           <hr/>
 
@@ -72,7 +75,7 @@
               is licensed under a 
               <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
               <br />
-              Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/golangcookbook/golangcookbook.github.io" rel="dct:source">https://github.com/golangcookbook/golangcookbook.github.io</a>.
+              Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="{{site.github.repository_url}}" rel="dct:source">{{site.github.repository_url}}</a>.
             </p>
           </div>
 
