@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -eou pipefail
+
+bundle exec jekyll serve -H 0.0.0.0 -wDP "$PORT" -l --livereload-port "$LRPORT" -t

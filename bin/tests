@@ -3,8 +3,6 @@
 test_output=/tmp/test_output.$$
 mkdir $test_output
 
-file_list=${*:-$(find chapters -name "test*.go")}
-
 print_success() { echo -n .; }
 print_failure() { echo -n x; }
 print_pending() { echo -n p; }
@@ -54,7 +52,7 @@ process_file() {
   generate_escaped "$file"
 }
 
-for file in $file_list; do
+for file in $(find chapters -name "test*.go"); do
   process_file "$file" &
 done
 
