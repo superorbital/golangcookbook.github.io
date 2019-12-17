@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func reverse(numbers []int) []int {
-	newNumbers := make([]int, len(numbers))
-	for i, j := 0, len(numbers)-1; i < j; i, j = i+1, j-1 {
-		newNumbers[i], newNumbers[j] = numbers[j], numbers[i]
+	newNumbers := make([]int, 0, len(numbers))
+	for i := len(numbers)-1; i >= 0; i-- {
+		newNumbers = append(newNumbers, numbers[i])
 	}
 	return newNumbers
 }
