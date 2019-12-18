@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-test_output=/tmp/test_output.$$
-mkdir $test_output
+TEST_OUTPUT=/tmp/test_output.$$
 
 print_success() { echo -n .; }
 print_failure() { echo -n x; }
 print_pending() { echo -n p; }
-print_output()  { echo; cat $test_output/*; }
+print_output()  { echo; cat $TEST_OUTPUT/*; }
 run_test() { diff <( go run "$1" 2>&1) "$2" > /dev/null; }
 
 record_failure() {
@@ -17,7 +16,7 @@ record_failure() {
     diff -yW200 <( go run "$1" 2>&1) "$2"
     echo "------------------------"
     echo
-  } >> "$test_output/${1//\//_}.out"
+  } >> "$TEST_OUTPUT/${1//\//_}.out"
 }
 
 generate_expected() {
@@ -52,12 +51,28 @@ process_file() {
   generate_escaped "$file"
 }
 
-for file in $(find chapters -name "test*.go"); do
-  process_file "$file" &
-done
+main() {
+  mkdir $TEST_OUTPUT
+  touch $TEST_OUTPUT/cat_on_empty_dir_hangs
 
-wait
+  if [[ "$#" -gt 0 ]]; then
+    shopt -s nullglob
+    files=( "$@" )
+  else
+    readarray -t files < <(find chapters -name "test*.go")
+  fi
 
-print_output
+  echo "Running tests for ${files[*]}"
 
-rm -rf $test_output
+  for file in "${files[@]}"; do
+    process_file "$file" &
+  done
+
+  wait
+
+  print_output
+
+  rm -rf $TEST_OUTPUT
+}
+
+main "$@"
