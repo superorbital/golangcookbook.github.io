@@ -3,4 +3,4 @@
 set -eou pipefail
 
 docker build . -t golangcookbook.com
-docker run --rm -it -p 4000:4000 -p 4001:4001 -u "$(id -u):$(id -g)" -v "$PWD:/site" golangcookbook.com "$@"
+docker run --rm -it -p 8000:8000 -p 8001:8001 -u "$(id -u):$(id -g)" -v "$PWD:/site" golangcookbook.com "$@"
