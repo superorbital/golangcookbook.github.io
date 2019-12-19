@@ -2,14 +2,12 @@ package main
 
 import (
 	&quot;fmt&quot;
-	&quot;os&quot;
 	&quot;strconv&quot;
 )
 
 func handleError(err error) {
 	if err != nil {
 		fmt.Println(err)
-		os.Exit(1)
 	}
 }
 
