@@ -34,5 +34,3 @@ algorithm buy doing a more straight-forward element copy:
 
 {%include example.html example="copy_simple"%}
 
-Since this loops through all of the elements (instead of just the top half of
-them), it might introduce a performance issue with very large arrays.
