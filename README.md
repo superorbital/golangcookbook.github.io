@@ -1,8 +1,8 @@
 # Go Cookbook
 
 Source for [the Go Cookbook](http://golangcookbook.com), a
-community build and contributed collection of practical
-recipes for real world Golang development, supported by
+community built collection of practical
+recipes and contributions for real world Golang development, supported by
 [SuperOrbital](https://superorbit.al).
 
 ### Contributing
