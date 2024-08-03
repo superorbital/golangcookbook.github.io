@@ -73,9 +73,9 @@ $ open http://localhost:4000
 $ ./run tests
 ```
 
-The `run_tests` script not only runs the tests, but also
-ensures that the `.expected`, `.go.escaped`, and
-`.expected.escaped` files are in place.  These files are then
+The `run_tests` script runs the tests and
+ensures the `.expected`, `.go.escaped`, and
+`.expected.escaped` files are in place.  These files are
 used in the recipe templates to ensure all examples are up to
 date and correct.
 
